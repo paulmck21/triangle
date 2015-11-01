@@ -1,0 +1,225 @@
+* {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0; }
+
+html {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0; }
+
+body {
+  max-width: 80em;
+  margin-right: auto;
+  margin-left: auto; }
+  @media (min-width: 768px) and (max-width: 992px) {
+    body {
+      max-width: 100em; } }
+  @media (max-width: 768px) {
+    body {
+      max-height: 100em; } }
+
+.backgroundDiv {
+  background-image: url("pics/background02.png");
+  background-size: contain;
+  background-repeat: repeat-y;
+  height: 270em; }
+  @media (max-width: 992px) and (min-width: 768px) {
+    .backgroundDiv {
+      height: 330em;
+      width: 100%; } }
+  @media (max-width: 768px) {
+    .backgroundDiv {
+      height: 410em;
+      width: 100%; } }
+
+a:hover {
+  text-decoration: none;
+  cursor: pointer; }
+
+.notTitlePage {
+  padding-top: 4em;
+  margin-top: 60em; }
+
+.banner {
+  position: relative;
+  top: 0;
+  height: 2em;
+  z-index: 10;
+  font-family: Helvetica, sans-serif;
+  font-size: 2em;
+  color: #fbe3df;
+  display: inline-block; }
+  .banner ul {
+    list-style: none; }
+    .banner ul li {
+      display: inline-block;
+      padding: 0 0 0 0; }
+      .banner ul li img {
+        max-width: 100%;
+        position: relative; }
+    .banner ul a {
+      color: black;
+      position: relative; }
+      .banner ul a:hover {
+        text-decoration: none; }
+
+.bannerFade {
+  display: none; }
+
+.topPage {
+  height: 60em; }
+
+.topPageLogo {
+  padding-top: 10em;
+  padding-bottom: 5em; }
+  .topPageLogo img {
+    max-width: 100%; }
+
+.topPageTitle {
+  font-family: Helvetica, sans-serif;
+  font-size: 1.9em;
+  text-align: center; }
+
+.servicesPage img {
+  max-width: 100%;
+  padding-left: 20%;
+  margin-top: 6em;
+  cursor: pointer; }
+  @media screen and (max-width: 768px) {
+    .servicesPage img {
+      padding-top: 1em;
+      margin-top: 1em; } }
+.servicesPage .row {
+  margin-right: 6.25%; }
+.servicesPage .infoBox {
+  margin-top: 2em;
+  display: none;
+  background-color: rgba(255, 255, 255, 0.8); }
+
+.infoBoxDiv {
+  cursor: pointer; }
+  @media (min-width: 768px) and (max-width: 992px) {
+    .infoBoxDiv {
+      margin-top: -40em;
+      margin-left: auto;
+      max-width: 80%;
+      font-size: 1.5em; } }
+  @media (max-width: 768px) {
+    .infoBoxDiv {
+      margin-top: -40em;
+      font-size: 1.5em; } }
+
+.facWrapper {
+  margin-top: 3em; }
+  @media (max-width: 768px) {
+    .facWrapper {
+      margin-top: 8em; } }
+
+.equipButton {
+  max-width: 100%;
+  position: relative; }
+  @media (max-width: 768px) {
+    .equipButton {
+      left: -25%; } }
+
+.studioButton {
+  position: relative;
+  left: 50%;
+  max-width: 100%; }
+  @media (max-width: 768px) {
+    .studioButton {
+      left: 25%;
+      padding-top: 1em; } }
+
+.fac {
+  max-width: 110%;
+  cursor: pointer; }
+  @media (min-width: 768px) and (max-width: 992px) {
+    .fac {
+      left: 3em;
+      max-width: 80%;
+      padding: 0 2em 0 2em; } }
+  @media (max-width: 768px) {
+    .fac {
+      left: 1em;
+      max-width: 80%;
+      padding: 0 2em 0 2em; } }
+
+.slideshow {
+  display: none;
+  position: relative;
+  margin: 0;
+  margin-bottom: 2em;
+  padding: 0;
+  overflow: scroll;
+  cursor: pointer;
+  z-index: 0; }
+  .slideshow .facList {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    height: auto;
+    display: flex;
+    list-style: none; }
+    .slideshow .facList img {
+      height: 100%;
+      width: 100%; }
+    .slideshow .facList li {
+      display: none; }
+
+.navButtons {
+  display: none;
+  font-size: 4.5em;
+  color: #534d49;
+  background-color: none;
+  border: none;
+  top: 200px; }
+  @media (min-width: 768px) and (max-width: 992px) {
+    .navButtons {
+      left: -0.2em; } }
+  @media (max-width: 768px) {
+    .navButtons {
+      left: -20em; } }
+
+#escapeX {
+  display: none;
+  font-size: 2em; }
+
+#studioList {
+  display: none;
+  list-style-type: none; }
+  #studioList img {
+    max-width: 100%; }
+
+#equipList {
+  display: none;
+  list-style-type: none; }
+  #equipList img {
+    max-width: 100%; }
+
+.contactPage {
+  padding-top: 1em; }
+
+.contactInfo {
+  margin-top: 3em;
+  position: relative; }
+  .contactInfo p {
+    padding-right: 2em;
+    text-align: right;
+    font-family: Helvetica, sans-serif;
+    color: #534d49;
+    font-size: 2em; }
+    @media (max-width: 768px) {
+      .contactInfo p {
+        padding-right: 0; } }
+
+.map {
+  max-width: 100%;
+  top: -3em; }
+  @media (min-width: 768px) and (max-width: 992px) {
+    .map {
+      padding: 0 2em 0 2em; } }
+  @media (min-width: 768px) {
+    .map {
+      top: 0; } }
+
+/*# sourceMappingURL=triangle04.css.map */

@@ -1,0 +1,359 @@
+
+
+$font-stack: Helvetica, sans-serif;
+$myPrimaryColor: #F2777e;
+$mySecondaryColor: #7e899e;
+$myGrey: black;
+$myLinkColor: #63B3BF;
+$myBannerText: black;
+
+$myLightGreen: #c3e6d0;
+$myDarkGreen: #3F454F;
+$myLightBlue: #b3caed;
+$myLightPink: #fbe3df;
+$myDarkGrey: #534d49;
+
+$breaksmall: 768px;
+$breakmedium: 992px;
+$breaklarge: 1024px;
+
+$breakpoints: (phone: 640px,
+				tablet: 768px,
+				desktop: 1024px) !default;
+
+$picHeight: 80vh;
+
+$myCursor: pointer;
+
+* {
+	padding: 0 0 0 0;
+	margin: 0 0 0 0;
+}
+
+html {
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+}
+
+body {
+	max-width: 80em;
+	
+	margin-right: auto;
+	margin-left: auto;
+	
+
+	@media (min-width: $breaksmall) and (max-width: $breakmedium){
+		max-width: 100em;
+	}
+	@media (max-width: $breaksmall){
+		max-height: 100em;
+	}
+}
+
+.backgroundDiv {
+	background-image: url('pics/background02.png');
+
+	background-size: contain;
+	background-repeat: repeat-y;
+	height: 270em;
+	@media (max-width: $breakmedium) and (min-width: $breaksmall){
+		height: 330em;
+		width: 100%
+	}
+	@media (max-width: $breaksmall){
+		height: 410em;
+		width: 100%
+	}
+
+}
+
+a:hover {
+	text-decoration: none;
+	cursor: $myCursor;
+}
+
+
+
+.notTitlePage {
+	padding-top: 4em;
+	margin-top: 60em;
+	// height: 70em;
+	// // @media (min-width: $breakmedium){
+	// // 	height: 140em;
+	// // }
+	// @media (min-width: $breaksmall) and (max-width: $breakmedium){
+	// 	height: 100em;
+	// }
+	// @media (max-width: $breaksmall){
+	// 	height: 80em;
+	// }
+}
+
+// BANNER
+
+.banner {
+	
+	position: relative;
+	top: 0;
+	height: 2em;
+		
+	z-index: 10;
+	font-family: $font-stack;
+	font-size: 2em;
+	color: $myLightPink;
+	display: inline-block;
+
+	ul {
+		list-style: none;
+		li {
+			display: inline-block;
+			padding: 0 0 0 0;
+			img {
+				max-width: 100%;
+				position: relative;
+			}
+		}
+		a {
+			color: $myBannerText;
+			position: relative;
+			
+			&:hover {
+				text-decoration: none;
+			}
+		}
+		
+	}
+}
+
+.bannerFade {
+	display: none;
+}
+
+
+
+// LANDING PAGE
+
+.topPage {
+	height: 60em;
+	// @media (max-width: $breakmedium) and (min-width: $breaksmall){
+	// 	height: 90em;
+	// }
+	// @media (max-width: $breaksmall){
+	// 	height: 110em;
+	// }
+
+}
+
+.topPageLogo {
+	padding-top: 10em;
+	padding-bottom: 5em;
+	img {
+		max-width: 100%;
+	}
+}
+
+.topPageTitle {
+	font-family: $font-stack;
+	font-size: 1.9em;
+	text-align: center;
+}
+
+// SERVICES PAGE
+
+.servicesPage {
+	img {
+		max-width: 100%;
+		padding-left: 20%;
+		margin-top: 6em;
+		cursor: $myCursor;
+		@media screen and (max-width: $breaksmall) {
+			padding-top: 1em;
+			margin-top: 1em;
+		}
+	}
+	.row {
+		margin-right: 6.25%;
+	}
+	.infoBox {
+		margin-top: 2em;
+		display: none;
+		background-color: rgba(255, 255, 255, 0.8);
+
+
+		
+	}
+}
+
+.infoBoxDiv {
+	cursor: $myCursor;
+	@media (min-width: $breaksmall) and (max-width: $breakmedium){
+		margin-top: -40em;
+		margin-left: auto;
+		max-width: 80%;
+		font-size: 1.5em;
+
+	}
+	@media (max-width: $breaksmall){
+		margin-top: -40em;
+		font-size: 1.5em;
+	}
+}
+
+// FACILITES PAGE
+
+.facWrapper {
+	margin-top: 3em;
+	@media (max-width: $breaksmall) {
+		margin-top: 8em;
+	}
+
+}
+
+.equipButton {
+	max-width: 100%;
+	position:relative;
+
+	@media (max-width: $breaksmall) {
+		
+		left: -25%;
+	}
+	
+}
+
+.studioButton {
+		position: relative;
+		left: 50%;
+		max-width: 100%;
+		@media (max-width: $breaksmall) {
+			left: 25%;
+			padding-top: 1em;
+		}
+}
+
+.fac {
+	max-width: 110%;
+	cursor: $myCursor;
+
+	@media (min-width: $breaksmall) and (max-width: $breakmedium){
+		left: 3em;
+		max-width: 80%;
+		padding: 0 2em 0 2em;
+	}
+	@media (max-width: $breaksmall){
+		left: 1em;
+		max-width: 80%;
+		padding: 0 2em 0 2em;
+	}
+}
+
+.slideshow {
+	display: none;
+	position: relative;
+	margin: 0;
+	margin-bottom: 2em;
+	padding: 0;
+	overflow: scroll;
+	cursor: $myCursor;
+	
+
+	z-index: 0;
+	.facList {
+		overflow: hidden;
+		
+			margin: 0;
+			padding: 0;
+			
+			height: auto;
+			display: flex;
+			list-style: none;
+		
+			
+			img { 
+				height: 100%;
+				
+				width: 100%;
+			}
+			li {
+				display: none;
+			}
+		
+	}
+}
+
+.navButtons {
+	display: none;
+	font-size: 4.5em;
+	color: $myDarkGrey;
+	background-color: none;
+	border: none;
+	top: 200px;
+		@media (min-width: $breaksmall) and (max-width: $breakmedium){
+		left: -0.2em;
+	}
+	@media (max-width: $breaksmall){
+		left: -20em;
+	}
+	
+}
+
+#escapeX {
+	display: none;
+	font-size: 2em;
+}
+
+#studioList {
+	display: none;
+	list-style-type: none;
+	img {
+		max-width: 100%;
+	}
+}
+
+#equipList {
+	display: none;
+	list-style-type: none;
+	img {
+		max-width: 100%;
+	}
+}
+
+// CONTACT PAGE
+
+.contactPage {
+	padding-top: 1em;
+}
+
+.contactInfo {
+	margin-top: 3em;
+	position: relative;
+	p {
+		padding-right: 2em;
+		text-align: right;
+		font-family: $font-stack;
+		color: $myDarkGrey;
+		font-size: 2em;
+		
+		@media (max-width: $breaksmall){
+			padding-right: 0;
+		}
+	}
+	
+}
+
+.map {
+	max-width:100%;
+	top: -3em;
+	@media (min-width: $breaksmall) and (max-width: $breakmedium){
+		// left: 3em;
+		// max-width: 80%;
+		padding: 0 2em 0 2em;
+	}
+	@media (min-width: $breaksmall) {
+		top: 0;
+		// margin-top: 1em;
+		// max-width: 100%;
+		// max-height: 200%;
+		// margin-left: -15em;
+		// margin-right: auto;
+	}
+}
