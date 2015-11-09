@@ -14,6 +14,15 @@
 
 $(document).ready(function() {
 
+
+	//Set height of body to end of page
+
+	var docHeight = $('.endOfPage').offset().top;
+
+	$('body').css('height', docHeight + 100);
+
+	console.log('docHeight is ' + docHeight);
+
 	scrolled();
 
 	$("#servicesBanner").on('click', function() {

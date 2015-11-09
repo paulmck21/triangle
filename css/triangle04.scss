@@ -37,17 +37,18 @@ html {
 
 body {
 	max-width: 80em;
+
 	
 	margin-right: auto;
 	margin-left: auto;
 	
 
-	@media (min-width: $breaksmall) and (max-width: $breakmedium){
-		max-width: 100em;
-	}
-	@media (max-width: $breaksmall){
-		max-height: 100em;
-	}
+	// @media (min-width: $breaksmall) and (max-width: $breakmedium){
+	// 	max-width: 100em;
+	// }
+	// @media (max-width: $breaksmall){
+	// 	max-height: 100em;
+	// }
 }
 
 .backgroundDiv {
@@ -55,15 +56,15 @@ body {
 
 	background-size: contain;
 	background-repeat: repeat-y;
-	height: 270em;
-	@media (max-width: $breakmedium) and (min-width: $breaksmall){
-		height: 330em;
-		width: 100%
-	}
-	@media (max-width: $breaksmall){
-		height: 410em;
-		width: 100%
-	}
+	// height: 270em;
+	// @media (max-width: $breakmedium) and (min-width: $breaksmall){
+	// 	height: 330em;
+	// 	width: 100%;
+	// }
+	// @media (max-width: $breaksmall){
+	// 	height: 410em;
+	// 	width: 100%;
+	// }
 
 }
 
@@ -299,6 +300,7 @@ a:hover {
 #escapeX {
 	display: none;
 	font-size: 2em;
+	z-index: 20;
 }
 
 #studioList {
@@ -356,4 +358,8 @@ a:hover {
 		// margin-left: -15em;
 		// margin-right: auto;
 	}
+}
+
+.endOfPage {
+	margin-top: 5em;
 }

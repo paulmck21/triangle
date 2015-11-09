@@ -79,13 +79,28 @@
 		</div>
 		<div class="row infoBoxDiv">
 			<div class="soundInfo col-sm-12 col-md-8 col-md-offset-2 infoBox" >
-				<p>SOUND INFO: Bacon ipsum dolor amet brisket bacon shoulder kevin chuck, pork loin sausage pancetta chicken beef ribs strip steak ham hock ham. Spare ribs shankle pork belly biltong kevin ground round. Spare ribs landjaeger tail tongue pig t-bone sirloin fatback cupim brisket frankfurter biltong shank beef. Meatloaf picanha landjaeger, sausage turducken leberkas pancetta. Alcatra chicken rump, turducken bacon corned beef meatloaf sirloin pork chop.</p>
+				<p><b>SOUND EDITING + MIXING</b></br></br>
+
+					We provide a <b>tracklay</b> and <b>editing service</b> as well as final 
+					<b>sound mixing</b> to make your projects sound great and meet the 
+					format standards they need to. We also offer bespoke <b>sound 
+					design</b> and <b>composition</b> services to make them stand out. </p>
 			</div>
 			<div class="voiceInfo col-sm-12 col-md-8 col-md-offset-2 infoBox">
-				<p>VOICE INFO: Bacon ipsum dolor amet brisket bacon shoulder kevin chuck, pork loin sausage pancetta chicken beef ribs strip steak ham hock ham. Spare ribs shankle pork belly biltong kevin ground round. Spare ribs landjaeger tail tongue pig t-bone sirloin fatback cupim brisket frankfurter biltong shank beef. Meatloaf picanha landjaeger, sausage turducken leberkas pancetta. Alcatra chicken rump, turducken bacon corned beef meatloaf sirloin pork chop.</p>
+				<p><b>VOICE + MUSIC RECORDING</b></br></br>
+
+					We provide vocal recording for <b>voice over</b>, <b>ADR</b> and <b>voice-reels</b>, 
+					as well as <b>instrument recording</b> for soloists and small ensembles, 
+					in our soundproofed and acoustically treated studio.</p>
 			</div>
 			<div class="locationInfo col-sm-12 col-md-8 col-md-offset-2 infoBox">
-				<p>LOCATION INFO: Bacon ipsum dolor amet brisket bacon shoulder kevin chuck, pork loin sausage pancetta chicken beef ribs strip steak ham hock ham. Spare ribs shankle pork belly biltong kevin ground round. Spare ribs landjaeger tail tongue pig t-bone sirloin fatback cupim brisket frankfurter biltong shank beef. Meatloaf picanha landjaeger, sausage turducken leberkas pancetta. Alcatra chicken rump, turducken bacon corned beef meatloaf sirloin pork chop.</p>
+				<p><b>LOCATION RECORDING + PLAYBACK</b></br></br>
+
+					We provide a full <b>location sound recordist</b> service, from talking 
+					head interviews to orchestral recordings to multitrack scripted drama 
+					and everything in between. We also provide <b>playback services</b> for music 
+					videos and drama, with multitrack, timecode-synced playback 
+					via PA and wireless earwig.</p>
 			</div>
 		</div>
 	</div>
@@ -137,23 +152,6 @@
 							}
 
 						?> 
-
-					<li>
-						<img src="http://placehold.it/600X300/d7f56b/3f3f3f&text=equip" alt="">
-						<p>Test1</p>
-					</li>
-					<li>
-						<img src="http://placehold.it/600X300/56cb56/3f3f3f&text=image1" alt="">
-						<p>Test2</p>
-					</li>
-					<li>
-						<img src="http://placehold.it/600X300/cb56cb/3f3f3f&text=image2" alt="">
-						<p>Test3</p>
-					</li>
-					<li>
-						<img src="http://placehold.it/600X300/d7f56b/3f3f3f&text=image3" alt="">
-						<p>Test4</p>
-					</li>
 				</ul>
 
 				<!-- studio slideshow pictures -->
@@ -176,14 +174,7 @@
 							}
 
 						?> 
-					<li>
-						<img src="http://placehold.it/600X300/d7f56b/3f3f3f&text=studio" alt=""></li>
-					<li>
-						<img src="http://placehold.it/600X300/56cb56/3f3f3f&text=image1" alt=""></li>
-					<li>
-						<img src="http://placehold.it/600X300/cb56cb/3f3f3f&text=image2" alt=""></li>
-					<li>
-						<img src="http://placehold.it/600X300/d7f56b/3f3f3f&text=image3" alt=""></li>
+					
 				</ul>
 				<!-- direction arrow for navigating slideshow -->
 				<span id='arrowRight' class="glyphicon glyphicon-triangle-right 
@@ -210,7 +201,9 @@
 		
 		
 			<div class="col-md-offset-2 col-md-8 col-sm-12 mapDiv">
-				<img src="css/pics/map01.png" alt="" class="map"></div>
+				<img src="css/pics/map01.png" alt="" class="map">
+				<div class="endOfPage"><span></span></div>
+			</div>
 			
 		
 		</div>

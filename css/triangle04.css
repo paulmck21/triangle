@@ -10,26 +10,11 @@ body {
   max-width: 80em;
   margin-right: auto;
   margin-left: auto; }
-  @media (min-width: 768px) and (max-width: 992px) {
-    body {
-      max-width: 100em; } }
-  @media (max-width: 768px) {
-    body {
-      max-height: 100em; } }
 
 .backgroundDiv {
   background-image: url("pics/background02.png");
   background-size: contain;
-  background-repeat: repeat-y;
-  height: 270em; }
-  @media (max-width: 992px) and (min-width: 768px) {
-    .backgroundDiv {
-      height: 330em;
-      width: 100%; } }
-  @media (max-width: 768px) {
-    .backgroundDiv {
-      height: 410em;
-      width: 100%; } }
+  background-repeat: repeat-y; }
 
 a:hover {
   text-decoration: none;
@@ -182,7 +167,8 @@ a:hover {
 
 #escapeX {
   display: none;
-  font-size: 2em; }
+  font-size: 2em;
+  z-index: 20; }
 
 #studioList {
   display: none;
@@ -221,5 +207,8 @@ a:hover {
   @media (min-width: 768px) {
     .map {
       top: 0; } }
+
+.endOfPage {
+  margin-top: 5em; }
 
 /*# sourceMappingURL=triangle04.css.map */
