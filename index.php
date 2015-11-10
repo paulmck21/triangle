@@ -189,13 +189,15 @@
 	<!-- Contact Page -->
 
 	<div class="container notTitlePage contactPage" id="contact">
+	<div id="map"></div>
+	
 		<div class="contactInfo">
 				<p>Donal Sweeney</p>
 				<p>077555555</p>
 				<p>info@triangle.audio</p>
 			</div>
 		<div class="mapRow">
-			<div id="map"></div>
+
 				<div class="endOfPage"><span></span></div>
 		
 			
