@@ -312,4 +312,6 @@ function initMap() {
 	      center: address,
 	      radius: 150
 	});
+
+  	console.log("map is " + map);
 }
