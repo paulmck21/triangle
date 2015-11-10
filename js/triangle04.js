@@ -317,10 +317,10 @@ function initMap() {
     zoom: 14
   });
   		var locationCirlce = new google.maps.Circle({
-	      strokeColor: '#fbe3df',
+	      strokeColor: '#3F454F',
 	      strokeOpacity: 0.8,
 	      strokeWeight: 2,
-	      fillColor: '#fbe3df',
+	      fillColor: '#3F454F',
 	      fillOpacity: 0.35,
 	      map: map,
 	      center: address,
