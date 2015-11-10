@@ -209,8 +209,8 @@ a:hover {
       top: 0; } }
 
 #map {
-  height: 500px;
-  width: 500px; }
+  height: 30em;
+  width: 50em; }
 
 .endOfPage {
   margin-top: 5em; }
