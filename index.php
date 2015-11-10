@@ -189,10 +189,12 @@
 	<!-- Contact Page -->
 
 	
-		<div id="map"></div>
+		
 	
 
 	<div class="container notTitlePage contactPage" id="contact">
+
+	<div id="map"></div>
 		<div class="contactInfo">
 				<p>Donal Sweeney</p>
 				<p>077555555</p>

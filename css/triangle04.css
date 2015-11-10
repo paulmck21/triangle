@@ -208,12 +208,9 @@ a:hover {
     .map {
       top: 0; } }
 
-.gmap {
+#map {
   height: 500px;
   width: 500px; }
-
-#map {
-  height: 100%; }
 
 .endOfPage {
   margin-top: 5em; }
