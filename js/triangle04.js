@@ -292,3 +292,24 @@ $(document).ready(function() {
 	})
 
 })
+
+//mapAPI
+
+var map;
+var address = {lat: 51.531394, lng: -0.101717};
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: address,
+    zoom: 14
+  });
+  		var locationCirlce = new google.maps.Circle({
+	      strokeColor: '#FF0000',
+	      strokeOpacity: 0.8,
+	      strokeWeight: 2,
+	      fillColor: '#FF0000',
+	      fillOpacity: 0.35,
+	      map: map,
+	      center: address,
+	      radius: 150
+	});
+}
