@@ -208,6 +208,12 @@ a:hover {
     .map {
       top: 0; } }
 
+.mapRow {
+  height: 100%; }
+
+#map {
+  height: 100%; }
+
 .endOfPage {
   margin-top: 5em; }
 

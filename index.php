@@ -194,17 +194,19 @@
 				<p>077555555</p>
 				<p>info@triangle.audio</p>
 			</div>
-		<div class="row">
+		<div class="mapRow">
+			<div id="map"></div>
+				<div class="endOfPage"><span></span></div>
 		
 			
 
 		
 		
-			<div class="col-md-offset-2 col-md-8 col-sm-12 mapDiv">
-				<!-- <img src="css/pics/map01.png" alt="" class="map"> -->
+			<!-- <div class="col-md-offset-2 col-md-8 col-sm-12 mapDiv">
+				<img src="css/pics/map01.png" alt="" class="map">
 				<div id="map"></div>
 				<div class="endOfPage"><span></span></div>
-			</div>
+			</div> -->
 			
 		
 		</div>
