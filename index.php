@@ -220,6 +220,8 @@
 <script src='js/bootstrap.min.js'></script>
 <script src="js/jq-sticky-anything.js"></script>
 <script src='js/triangle04.js'></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXI9cUNtDtSBKPer7_ihUlBSPhItVYGUo&callback=initMap"
+        async defer></script>
 
 </body>
 </html>
