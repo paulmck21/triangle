@@ -188,27 +188,26 @@
 
 	<!-- Contact Page -->
 
+	<div class="gmap">
+		<div id="map"></div>
+	</div>
+
 	<div class="container notTitlePage contactPage" id="contact">
-	<div id="map"></div>
-	
 		<div class="contactInfo">
 				<p>Donal Sweeney</p>
 				<p>077555555</p>
 				<p>info@triangle.audio</p>
 			</div>
-		<div class="mapRow">
-
-				<div class="endOfPage"><span></span></div>
+		<div class="row">
 		
 			
 
 		
 		
-			<!-- <div class="col-md-offset-2 col-md-8 col-sm-12 mapDiv">
-				<img src="css/pics/map01.png" alt="" class="map">
-				<div id="map"></div>
+			<div class="col-md-offset-2 col-md-8 col-sm-12 mapDiv">
+				<!-- <img src="css/pics/map01.png" alt="" class="map"> -->
 				<div class="endOfPage"><span></span></div>
-			</div> -->
+			</div>
 			
 		
 		</div>
@@ -221,8 +220,6 @@
 <script src='js/bootstrap.min.js'></script>
 <script src="js/jq-sticky-anything.js"></script>
 <script src='js/triangle04.js'></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXI9cUNtDtSBKPer7_ihUlBSPhItVYGUo&callback=initMap"
-        async defer></script>
 
 </body>
 </html>
