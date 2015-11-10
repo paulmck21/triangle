@@ -209,7 +209,7 @@ a:hover {
       top: 0; } }
 
 #map {
-  height: 500px;
+  height: 100%;
   width: 500px; }
 
 .endOfPage {

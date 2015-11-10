@@ -298,6 +298,20 @@ $(document).ready(function() {
 var map;
 var address = {lat: 51.531394, lng: -0.101717};
 function initMap() {
+
+	var styles = [
+    {
+      stylers: [
+        { hue: "#b3caed" },
+        { saturation: -20 }
+      ]
+  }]
+
+  var styledMap = new google.maps.StyledMapType(styles,
+    {name: "Triangle Map"});
+
+
+
   map = new google.maps.Map(document.getElementById('map'), {
     center: address,
     zoom: 14
@@ -312,6 +326,9 @@ function initMap() {
 	      center: address,
 	      radius: 150
 	});
+
+  		map.mapTypes.set('map_style', styledMap);
+ 		map.setMapTypeId('map_style');
 
   	console.log("map is " + map);
 }
