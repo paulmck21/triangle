@@ -188,9 +188,9 @@
 
 	<!-- Contact Page -->
 
-	<div class="gmap">
+	
 		<div id="map"></div>
-	</div>
+	
 
 	<div class="container notTitlePage contactPage" id="contact">
 		<div class="contactInfo">
