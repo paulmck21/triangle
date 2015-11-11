@@ -315,6 +315,7 @@ function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: address,
     zoom: 14,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
     scrollWheel: false
   });
   		var locationCirlce = new google.maps.Circle({
