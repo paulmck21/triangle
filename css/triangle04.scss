@@ -365,6 +365,12 @@ a:hover {
 #map {
 	height: 30em;
 	width: 50em;
+	@media (min-width: $breaksmall) and (max-width: $breakmedium){
+		width: 50em;
+	}
+	@media (min-width: $breaksmall) {
+		width: 30em;
+	}
 }
 
 .endOfPage {

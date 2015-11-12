@@ -211,6 +211,12 @@ a:hover {
 #map {
   height: 30em;
   width: 50em; }
+  @media (min-width: 768px) and (max-width: 992px) {
+    #map {
+      width: 50em; } }
+  @media (min-width: 768px) {
+    #map {
+      width: 30em; } }
 
 .endOfPage {
   margin-top: 5em; }
