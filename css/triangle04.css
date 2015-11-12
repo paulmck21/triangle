@@ -210,7 +210,8 @@ a:hover {
       width: 50em; } }
   @media (max-width: 768px) {
     #map {
-      width: 30em; } }
+      width: 25em;
+      height: 25em; } }
 
 .endOfPage {
   margin-top: 5em; }
