@@ -201,20 +201,14 @@ a:hover {
 .map {
   max-width: 100%;
   top: -3em; }
-  @media (min-width: 768px) and (max-width: 992px) {
-    .map {
-      padding: 0 2em 0 2em; } }
-  @media (min-width: 768px) {
-    .map {
-      top: 0; } }
 
 #map {
   height: 30em;
   width: 50em; }
-  @media (min-width: 768px) and (max-width: 992px) {
+  @media (max-width: 768px) and (min-width: 992px) {
     #map {
       width: 50em; } }
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
     #map {
       width: 30em; } }
 

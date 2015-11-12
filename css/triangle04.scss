@@ -78,16 +78,7 @@ a:hover {
 .notTitlePage {
 	padding-top: 4em;
 	margin-top: 60em;
-	// height: 70em;
-	// // @media (min-width: $breakmedium){
-	// // 	height: 140em;
-	// // }
-	// @media (min-width: $breaksmall) and (max-width: $breakmedium){
-	// 	height: 100em;
-	// }
-	// @media (max-width: $breaksmall){
-	// 	height: 80em;
-	// }
+	
 }
 
 // BANNER
@@ -136,12 +127,7 @@ a:hover {
 
 .topPage {
 	height: 60em;
-	// @media (max-width: $breakmedium) and (min-width: $breaksmall){
-	// 	height: 90em;
-	// }
-	// @media (max-width: $breaksmall){
-	// 	height: 110em;
-	// }
+
 
 }
 
@@ -345,19 +331,7 @@ a:hover {
 .map {
 	max-width:100%;
 	top: -3em;
-	@media (min-width: $breaksmall) and (max-width: $breakmedium){
-		// left: 3em;
-		// max-width: 80%;
-		padding: 0 2em 0 2em;
-	}
-	@media (min-width: $breaksmall) {
-		top: 0;
-		// margin-top: 1em;
-		// max-width: 100%;
-		// max-height: 200%;
-		// margin-left: -15em;
-		// margin-right: auto;
-	}
+	
 }
 
 
@@ -365,10 +339,10 @@ a:hover {
 #map {
 	height: 30em;
 	width: 50em;
-	@media (min-width: $breaksmall) and (max-width: $breakmedium){
+	@media (max-width: $breaksmall) and (min-width: $breakmedium){
 		width: 50em;
 	}
-	@media (min-width: $breaksmall) {
+	@media (max-width: $breaksmall) {
 		width: 30em;
 	}
 }
