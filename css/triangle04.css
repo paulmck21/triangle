@@ -84,13 +84,21 @@ a:hover {
   cursor: pointer; }
   @media (min-width: 768px) and (max-width: 992px) {
     .infoBoxDiv {
-      margin-top: -40em;
-      margin-left: auto;
+      position: fixed;
+      top: 0;
+      left: 0;
+      margin-top: 2em;
+      margin-left: 1em;
       max-width: 80%;
       font-size: 1.5em; } }
   @media (max-width: 768px) {
     .infoBoxDiv {
-      margin-top: -40em;
+      position: fixed;
+      top: 0;
+      left: 0;
+      margin-top: 2em;
+      margin-left: 1em;
+      margin-top: 2em;
       font-size: 1.5em; } }
 
 .facWrapper {
