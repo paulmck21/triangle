@@ -294,7 +294,7 @@ $(document).ready(function() {
 	//disable scroll on map
 
 	$('#map').addClass('scrolloff'); 
-        $('#map').on('click', function () {
+        $('#mapDiv').on('click', function () {
             $('#map').removeClass('scrolloff');
         });
 
