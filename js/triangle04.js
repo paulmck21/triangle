@@ -291,6 +291,17 @@ $(document).ready(function() {
 		}
 	})
 
+	//disable scroll on map
+
+	$('#map').addClass('scrolloff'); 
+        $('#map').on('click', function () {
+            $('#map').removeClass('scrolloff');
+        });
+
+       
+        $("#map").mouseleave(function () {
+            $('#map').addClass('scrolloff'); 
+
 })
 
 //mapAPI
@@ -335,3 +346,5 @@ function initMap() {
 
   	console.log("map is " + map);
 }
+
+
