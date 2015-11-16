@@ -301,6 +301,7 @@ $(document).ready(function() {
        
         $("#map").mouseleave(function () {
             $('#map').addClass('scrolloff'); 
+        });
 
 })
 
