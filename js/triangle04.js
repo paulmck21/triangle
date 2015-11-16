@@ -314,9 +314,10 @@ function initMap() {
 
   map = new google.maps.Map(document.getElementById('map'), {
     center: address,
+    scrollWheel: false,
     zoom: 14,
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
-    scrollWheel: false
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+    
   });
   		var locationCirlce = new google.maps.Circle({
 	      strokeColor: '#3F454F',
