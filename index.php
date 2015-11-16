@@ -206,7 +206,7 @@
 
 		
 		
-			<div class="col-md-offset-2 col-md-8 col-sm-12 mapDiv">
+			<div class="col-md-offset-2 col-md-8 col-sm-12 mapDiv" id="mapDiv">
 				<div id="map"></div>
 				<!-- <img src="css/pics/map01.png" alt="" class="map"> -->
 				<div class="endOfPage"><span></span></div>
