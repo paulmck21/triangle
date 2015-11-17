@@ -19,19 +19,24 @@
 	<div class="container topPage">
 
 		<div class="row">
-			<div class="col-md-3 col-sm-1"></div>
-			<div class="col-md-6 col-sm-10 topPageLogo">
+
+			<div class="col-md-offset-3 col-sm-offset-1 col-md-6 col-sm-10 topPageLogo">
+
+				<!-- LOGO GOES HERE -->
 				<img src="css/pics/logo01.png" alt="">
 			</div>
-			<div class="col-md-3 col-sm-1"></div>
+			
 
 		</div>
 
+	<!-- 	THIS IS THE BANNER WITH NAVIGATION BAR -->
 	<div class="banner container">
 		<ul class="row">
 			<li class="col-xs-4" id="servicesBanner">
 				<a href="#services">
+				<!-- FIRST ONE IS THE FULL OPACITY VERSION FOR THE HIGHLIGHTED STATE -->
 					<img src="css/pics/bannerServices.png" class="servicesBannerImg bannerImg">
+				<!-- SECOND IS THE FADED STATE, same with the following 2 -->
 					<img src="css/pics/bannerServicesFade.png" class="servicesBannerFade bannerFade">
 				</a>
 				
@@ -65,6 +70,7 @@
 		<div class="row">
 
 			<div class="col-md-4 col-sm-12 services soundButton">
+			<!-- THESE ARE THE IMAGES FOR THE SERVICES BUTTONS -->
 				<img src="css/pics/services01.png" alt="">
 			</div>
 
@@ -78,6 +84,9 @@
 
 		</div>
 		<div class="row infoBoxDiv">
+
+		<!-- THESE ARE THE BOXES WITH THE INFO IN THEM. CHANGE CONTENT HERE -->
+		<!-- <b>THIS WILL BE IN BOLD<b> and </br>THIS WILL BE ON A NEW LINE -->
 			<div class="soundInfo col-sm-12 col-md-8 col-md-offset-2 infoBox" >
 				<p><b>SOUND EDITING + MIXING</b></br></br>
 
@@ -110,7 +119,7 @@
 	<div class="container notTitlePage facilitesPage" id="facilities">
 		<div class="row">
 		
-
+		<!-- THESE ARE THE BUTTONS TO START THE SLIDESHOWS -->
 			<div class="col-md-3 col-md-offset-3 col-sm-12 facWrapper">
 				<img src="css/pics/equipButton.png" alt="" class="fac equipButton">
 				<img src="css/pics/studioButton.png" alt="" class="fac studioButton">
@@ -119,14 +128,14 @@
 
 
 		</div>
-				<!-- escape button on the slideshow -->
+				<!-- ESCAPE X FOR THE SLIDESHOW -->
 				<span id='escapeX' class="glyphicon glyphicon-remove" aria-hidden="true"></span>
 		<div class="row slideshow">
 			
 
 		
 				
-				<!-- direction arrow for navigating slideshow -->
+				<!-- direction arrow for navigating slideshow LEFT -->
 				<span id='arrowLeft' class="glyphicon glyphicon-triangle-left navButtons col-xs-1" 
 					aria-hidden="true"></span>
 				
@@ -176,7 +185,7 @@
 						?> 
 					
 				</ul>
-				<!-- direction arrow for navigating slideshow -->
+				<!-- direction arrow for navigating slideshow RIGHT -->
 				<span id='arrowRight' class="glyphicon glyphicon-triangle-right 
 					navButtons  next col-xs-1" aria-hidden="true"></span>
 
@@ -194,21 +203,22 @@
 
 	<div class="container notTitlePage contactPage" id="contact">
 
-
+	<!-- OBVIOUSLY PUT YOUR ACTUAL DETAILS IN HERE, HAVEN'T REALLY FORMATTED IT HEAVILY
+		BUT IF YOU WANT TO CHANGE THE FONT OR COLOUR IT'LL BE EASY -->
 		<div class="contactInfo">
 				<p>Donal Sweeney</p>
 				<p>077555555</p>
 				<p>info@triangle.audio</p>
 			</div>
+
 		<div class="row">
 		
-			
-
-		
-		
+		<!-- THIS IS THE MAP. THE JAVASCRIPT PUTS THE MAP IN SO YOU JUST HAVE TO A DIV	
+			FOR IT TO ATTACH ITSELF TO -->
 			<div class="col-md-offset-2 col-md-8 col-sm-12 mapDiv" id="mapDiv">
 				<div id="map"></div>
-				<!-- <img src="css/pics/map01.png" alt="" class="map"> -->
+
+				<!-- THIS IS USED AS A GUIDE FOR HOW LARGE TO MAKE THE BACKGROUND -->
 				<div class="endOfPage"><span></span></div>
 			</div>
 			
@@ -223,8 +233,9 @@
 <script src='js/bootstrap.min.js'></script>
 <script src="js/jq-sticky-anything.js"></script>
 <script src='js/triangle04.js'></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXI9cUNtDtSBKPer7_ihUlBSPhItVYGUo&callback=initMap"
-        async defer></script>
+<script src="https://maps.googleapis.com/maps/api/
+				js?key=AIzaSyDXI9cUNtDtSBKPer7_ihUlBSPhItVYGUo&callback=initMap"
+        		async defer></script>
 
 </body>
 </html>

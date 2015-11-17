@@ -1,11 +1,12 @@
 
+// VARIABLES ARE ALL DECLARED HERE FOR USE LATER IN THE CSS
+
 
 $font-stack: Helvetica, sans-serif;
 $myPrimaryColor: #F2777e;
 $mySecondaryColor: #7e899e;
 $myGrey: black;
 $myLinkColor: #63B3BF;
-$myBannerText: black;
 
 $myLightGreen: #c3e6d0;
 $myDarkGreen: #3F454F;
@@ -13,17 +14,17 @@ $myLightBlue: #b3caed;
 $myLightPink: #fbe3df;
 $myDarkGrey: #534d49;
 
+// THESE ARE SET TO THE BREAKPOINTS OF THE BOOTSTRAP ARCHETECTURE THE SITE IS BUILT ON
+// MEANING I'VE SET THINGS TO CHANGE SIZE AT THE SAME POINTS AS BOOTSTRAP CHANGES
 $breaksmall: 768px;
 $breakmedium: 992px;
 $breaklarge: 1024px;
 
-$breakpoints: (phone: 640px,
-				tablet: 768px,
-				desktop: 1024px) !default;
-
 $picHeight: 80vh;
 
 $myCursor: pointer;
+
+// OVERALL DOCUMENT FORMATTING 
 
 * {
 	padding: 0 0 0 0;
@@ -37,35 +38,15 @@ html {
 
 body {
 	max-width: 80em;
-
-	
 	margin-right: auto;
 	margin-left: auto;
-	
-
-	// @media (min-width: $breaksmall) and (max-width: $breakmedium){
-	// 	max-width: 100em;
-	// }
-	// @media (max-width: $breaksmall){
-	// 	max-height: 100em;
-	// }
 }
 
 .backgroundDiv {
 	background-image: url('pics/background02.png');
-
 	background-size: contain;
 	background-repeat: repeat-y;
-	// height: 270em;
-	// @media (max-width: $breakmedium) and (min-width: $breaksmall){
-	// 	height: 330em;
-	// 	width: 100%;
-	// }
-	// @media (max-width: $breaksmall){
-	// 	height: 410em;
-	// 	width: 100%;
-	// }
-
+	height: inherit;
 }
 
 a:hover {
@@ -73,12 +54,11 @@ a:hover {
 	cursor: $myCursor;
 }
 
-
-
+// ALL THE PAGES THAT AREN'T THE TOP PAGE
 .notTitlePage {
 	padding-top: 4em;
 	margin-top: 60em;
-	
+	height: auto;
 }
 
 // BANNER
@@ -106,7 +86,7 @@ a:hover {
 			}
 		}
 		a {
-			color: $myBannerText;
+			
 			position: relative;
 			
 			&:hover {
@@ -207,12 +187,9 @@ a:hover {
 .equipButton {
 	max-width: 100%;
 	position:relative;
-
 	@media (max-width: $breaksmall) {
-		
 		left: -25%;
 	}
-	
 }
 
 .studioButton {
@@ -249,29 +226,21 @@ a:hover {
 	padding: 0;
 	overflow: scroll;
 	cursor: $myCursor;
-	
-
 	z-index: 0;
 	.facList {
 		overflow: hidden;
-		
 			margin: 0;
 			padding: 0;
-			
 			height: auto;
 			display: flex;
 			list-style: none;
-		
-			
 			img { 
 				height: 100%;
-				
 				width: 100%;
 			}
 			li {
 				display: none;
 			}
-		
 	}
 }
 
@@ -339,11 +308,8 @@ a:hover {
 .map {
 	max-width:100%;
 	top: -3em;
-	
 }
-
-
-
+ 
 #map {
 	height: 30em;
 	width: 50em;

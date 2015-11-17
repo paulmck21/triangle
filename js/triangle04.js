@@ -55,7 +55,6 @@ $(document).ready(function() {
 		var scrollHeight = $(window).scrollTop();
 		var body = $(document.body);
 
-		// console.log("facHeight is " + facHeight + " and scrollHeight is " + scrollHeight);
 
 		$banner.stickThis();
 
@@ -79,7 +78,7 @@ $(document).ready(function() {
 			highlightContacts();
 		}
 		else {
-			// $(".banner").fadeOut();
+
 		}
 
 	}
@@ -152,10 +151,6 @@ $(document).ready(function() {
 		$infoBox.fadeOut();
 	});
 
-	// $(document.body).on('click', function(){
-	// 	$infoBox.hide();
-	// })
-
 	//FACILITES
 
 	//on clicking facilites buttons show slideshow
@@ -170,15 +165,6 @@ $(document).ready(function() {
 		equipListImg = $('#equipList li'),
 		$list = $('#equipList'),
 		listItems = $equipList;
-		
-
-		
-		// listItems =  $('#equipList img'),
-		// listLen = listItems.length,
-		// pos = 0;
-		// currImg = listItems[pos],
-		// $next = $(listItems, '#arrowRight'),
-		// nextImage;
 
 	$('.equipButton').on('click', function() {
 		toggleButtons();
@@ -293,7 +279,8 @@ $(document).ready(function() {
 
 	//disable scroll on map
 
-	$('#map').addClass('scrolloff'); 
+		$('#map').addClass('scrolloff'); 
+
         $('#mapDiv').on('click', function () {
             $('#map').removeClass('scrolloff');
         });

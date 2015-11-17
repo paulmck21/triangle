@@ -14,7 +14,8 @@ body {
 .backgroundDiv {
   background-image: url("pics/background02.png");
   background-size: contain;
-  background-repeat: repeat-y; }
+  background-repeat: repeat-y;
+  height: inherit; }
 
 a:hover {
   text-decoration: none;
@@ -22,7 +23,8 @@ a:hover {
 
 .notTitlePage {
   padding-top: 4em;
-  margin-top: 60em; }
+  margin-top: 60em;
+  height: auto; }
 
 .banner {
   position: relative;
@@ -42,7 +44,6 @@ a:hover {
         max-width: 100%;
         position: relative; }
     .banner ul a {
-      color: black;
       position: relative; }
       .banner ul a:hover {
         text-decoration: none; }
