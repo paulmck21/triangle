@@ -1,5 +1,4 @@
 (function(){
-	$( '.js' ).toggle();
 
 	$('.slideshow').css('overflow', 'hidden');
 
@@ -16,34 +15,35 @@ $(document).ready(function() {
 
 
 	//Set height of body to end of page
+	function setDocHeight(){
+		var docHeight = $('.endOfPage').offset().top;
+		$('body').css('height', docHeight + 100);
+	}
+	
 
-	var docHeight = $('.endOfPage').offset().top;
 
-	$('body').css('height', docHeight + 100);
-
-	console.log('docHeight is ' + docHeight);
-
+// CALL SCROLLED FUNCTIONS TO INTIALISE THE ELEMENTS ON THE PAGE
 	scrolled();
+	
 
+// CONTROLLING THE HIGHLIGHTING OF THE BANNER
 	$("#servicesBanner").on('click', function() {
-		
 		resetBanner();
 		highlightServices();
 	})
 
 	$("#facBanner").on('click', function() {
-		
 		resetBanner();
 		highlightFacilities();
 	})
 
 	$("#contactBanner").on('click', function() {
-		
 		resetBanner();
 		highlightContacts();
 	})
 
-	//funtion to show banner when page scrolled past TitlePage
+	//FUNCTION TO HIGHLIGHT THE BANNER WHEN SCROLLED
+	//INCLUDES PLUGIN TO STICK BANNER TO THE TOP
 
 	function scrolled() {
 
@@ -55,10 +55,14 @@ $(document).ready(function() {
 		var scrollHeight = $(window).scrollTop();
 		var body = $(document.body);
 
+		//CALLS SETDOCKHEIGHT FUNCTION SO IT STAYS ACCURATE WHEN THINGS ARE RESIZED
+		setDocHeight();
 
+		//PLUGIN TO STICK BANNER TO THE TOP
 		$banner.stickThis();
 
 		if ( scrollHeight < (servicesHeight * 0.79)){
+			//HIGHLIGHT ALL IF ON LANDING PAGE
 			$(".bannerFade").hide();
 			$(".bannerImg").show();
 
@@ -87,9 +91,8 @@ $(document).ready(function() {
 	function resetBanner() {
 		$(".bannerImg").hide();
 		$(".bannerFade").show();
-		
 	}
-
+	//FUNCTIONS TO HIGHLIGHT THE RELEVENT BANNER IMAGES
 	function highlightServices() {
 		resetBanner();
 		$(".servicesBannerFade").hide();
@@ -119,6 +122,8 @@ $(document).ready(function() {
 	var $voiceInfo = $('.voiceInfo');
 	var $locationInfo = $('.locationInfo');
 
+	//EVENT LISTENERS TO SEE WHEN THE SERVICE BUTTONS ARE CLICKED AND SHOW OR HIDE THE
+	//APPROPRIATE ELEMENTS
 	$('.soundButton').on('click', function(){
 		if ($soundInfo.is(':visible')) {
 			$soundInfo.fadeToggle();
@@ -147,6 +152,7 @@ $(document).ready(function() {
 		}
 	});
 
+	//FADE OUT THE INFOBOX WHEN IT'S CLICKED
 	$infoBox.on('click', function(){
 		$infoBox.fadeOut();
 	});
@@ -170,15 +176,12 @@ $(document).ready(function() {
 		toggleButtons();
 		$equipList.toggle();
 
-		list = $equipList;
 		listItems =  $(equipListImg);
 		listLen = listItems.length;
 		pos = 0;
 		currImg = listItems[pos];
 		$next = listItems.add($('#arrowRight'));
 		nextImage;
-
-		console.log("listLen is " + listLen);
 
 		$(currImg).show();
 		
@@ -188,15 +191,12 @@ $(document).ready(function() {
 		toggleButtons();
 		$studioList.toggle();
 
-		list = $studioList;
 		listItems =  $(studioListImg);
 		listLen = listItems.length;
 		pos = 0;
 		currImg = listItems[pos];
 		$next = listItems.add($('#arrowRight'));
 		nextImage;
-
-		console.log("listLen is " + listLen);
 
 		$(currImg).show();
 	});
@@ -218,33 +218,17 @@ $(document).ready(function() {
 	};
 
 
-	//functions to move back and forth in the slideshow
-	
-
-	
-
+	//EVENT LISTENERS AND FUNCTIONS to move back and forth in the slideshow
 	$('.next').on('click', nextImage);
-
-
-
 	$('#arrowLeft').on('click', prevImage);
-
-
-
-
 	function nextImage(){
 		if (pos == (listLen - 1)) {
 			pos = 0;
 		} else{
 			pos +=1
 		};
-
 		$(currImg).toggle();
-
 		currImg = listItems[pos];
-
-		console.log("pos is " + pos);
-
 		$(currImg).toggle();
 	}
 
@@ -254,20 +238,15 @@ $(document).ready(function() {
 		} else{
 			pos -=1
 		}
-
 		$(currImg).toggle();
-
 		currImg = listItems[pos];
-
 		console.log("pos is " + pos);
-
 		$(currImg).toggle();
-
 	}
 
 	$escapeX.on('click', escapeSlideshow);
 
-	//keyup listener for escape out of slideshow
+	//keyup listener for escape out of slideshow USING ESCAPE KEY
 
 	$(document).keyup(function(e){
 		if (e.keyCode == 27){
@@ -298,10 +277,13 @@ var map;
 var address = {lat: 51.531394, lng: -0.101717};
 function initMap() {
 
+	var myMapColor = "#b3caed";
+	var myMapCircle = "#3F454F";
+
 	var styles = [
     {
       stylers: [
-        { hue: "#b3caed" },
+        { hue: myMapColor },
         { saturation: -20 }
       ]
   }]
@@ -314,19 +296,19 @@ function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: address,
     scrollWheel: false,
-    zoom: 14,
+    zoom: 14, //change to increase or decrease initial zoom on location
     mapTypeId: google.maps.MapTypeId.ROADMAP
     
   });
   		var locationCirlce = new google.maps.Circle({
-	      strokeColor: '#3F454F',
+	      strokeColor: myMapCircle,
 	      strokeOpacity: 0.8,
 	      strokeWeight: 2,
-	      fillColor: '#3F454F',
+	      fillColor: myMapCircle,
 	      fillOpacity: 0.35,
 	      map: map,
 	      center: address,
-	      radius: 150
+	      radius: 150 //edit to change size of circle
 	});
 
   		map.mapTypes.set('map_style', styledMap);
