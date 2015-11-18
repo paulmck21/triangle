@@ -20,7 +20,7 @@
 
 		<div class="row">
 
-			<div class="col-md-offset-3 col-sm-offset-1 col-md-6 col-sm-10 topPageLogo">
+			<div class="col-md-offset-3 col-md-6 col-sm-offset-1 col-sm-10 topPageLogo">
 
 				<!-- LOGO GOES HERE -->
 				<img src="css/pics/logo01.png" alt="">
@@ -83,8 +83,8 @@
 			</div>
 
 		</div>
-		<div class="row infoBoxDiv">
 
+		<div class="row infoBoxDiv">
 		<!-- THESE ARE THE BOXES WITH THE INFO IN THEM. CHANGE CONTENT HERE -->
 		<!-- <b>THIS WILL BE IN BOLD<b> and </br>THIS WILL BE ON A NEW LINE -->
 			<div class="soundInfo col-sm-12 col-md-8 col-md-offset-2 infoBox" >

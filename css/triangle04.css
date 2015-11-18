@@ -117,7 +117,7 @@ a:hover {
 
 .studioButton {
   position: relative;
-  left: 50%;
+  left: 55%;
   max-width: 100%; }
   @media (max-width: 768px) {
     .studioButton {
