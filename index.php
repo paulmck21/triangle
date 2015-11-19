@@ -16,7 +16,7 @@
 
 	<!-- Landing Page to be set to 100% height-->	
 	
-	<div class="container topPage">
+	<div class="container topPage" style="width:100%">
 
 		<div class="row">
 
@@ -30,7 +30,7 @@
 		</div>
 
 	<!-- 	THIS IS THE BANNER WITH NAVIGATION BAR -->
-	<div class="banner container">
+	<div class="banner container" style="width:75%; display:inherit;">
 		<ul class="row">
 			<li class="col-xs-4" id="servicesBanner">
 				<a href="#services">
@@ -157,7 +157,7 @@
 
 								echo  '<li>
 										<img src="'.$imgs[$i].'">
-										<p>'.file_get_contents($textfile[$i]).'</p>
+										<p style="text-align:center; font-size: 2em; margin: 10px 0 10px">'.file_get_contents($textfile[$i]).'</p>
 									</li>';
 							}
 
@@ -207,9 +207,8 @@
 	<!-- OBVIOUSLY PUT YOUR ACTUAL DETAILS IN HERE, HAVEN'T REALLY FORMATTED IT HEAVILY
 		BUT IF YOU WANT TO CHANGE THE FONT OR COLOUR IT'LL BE EASY -->
 		<div class="contactInfo">
-				<p>Donal Sweeney</p>
-				<p>077555555</p>
-				<p>info@triangle.audio</p>
+				<p>INFO@TRIANGLEAUDIO.CO.UK</p>
+				<p>+44 740 393 4602</p></br>
 			</div>
 
 		<div class="row">
