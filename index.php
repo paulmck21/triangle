@@ -70,15 +70,15 @@
 	<div class="container notTitlePage servicesPage" id="services">
 		<div class="row">
 
-			<div class="col-md-4 col-sm-12 services soundButton">
-			<!-- THESE ARE THE IMAGES FOR THE SERVICES BUTTONS -->
-				<img src="css/pics/services01.png" alt="">
-			</div>
-
 			<div class="col-md-4 col-sm-12 services voiceButton">
 				<img src="css/pics/services02.png" alt="">
 			</div>
 
+			<div class="col-md-4 col-sm-12 services soundButton">
+			<!-- THESE ARE THE IMAGES FOR THE SERVICES BUTTONS -->
+				<img src="css/pics/services01.png" alt="">
+			</div>
+			
 			<div class="col-md-4 col-sm-12 services locationButton">
 				<img src="css/pics/services03.png" alt="">
 			</div>
@@ -207,7 +207,7 @@
 	<!-- OBVIOUSLY PUT YOUR ACTUAL DETAILS IN HERE, HAVEN'T REALLY FORMATTED IT HEAVILY
 		BUT IF YOU WANT TO CHANGE THE FONT OR COLOUR IT'LL BE EASY -->
 		<div class="contactInfo">
-				<p>INFO@TRIANGLEAUDIO.CO.UK</p>
+				<p><a href="mailto:info@triangleaudio.co.uk?Subject=Hello" style="color: #534d49" target="_top">INFO@TRIANGLEAUDIO.CO.UK</a></p>
 				<p>+44 740 393 4602</p></br>
 			</div>
 
