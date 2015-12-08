@@ -30,7 +30,9 @@
 		</div>
 
 	<!-- 	THIS IS THE BANNER WITH NAVIGATION BAR -->
+
 	<div class="banner container" >
+
 		<ul class="row">
 			<li class="col-xs-4" id="servicesBanner">
 				<a href="#services">
@@ -121,6 +123,7 @@
 		
 		<div class="row slideshow">
 				
+
 			<!-- direction arrow for navigating slideshow LEFT -->
 			<span id='arrowLeft' class="glyphicon glyphicon-triangle-left navButtons col-xs-1 prev" 
 				aria-hidden="true"></span>
@@ -129,25 +132,34 @@
 			<!-- equipment slideshow pictures -->
 			<ul class="photosList col-xs-10 next" id="photosList">
 
-				<?php
+				<!-- direction arrow for navigating slideshow LEFT -->
+				<span id='arrowLeft' class="glyphicon glyphicon-triangle-left navButtons col-xs-1" 
+					aria-hidden="true"></span>
+				
+				
+				<!-- equipment slideshow pictures -->
+				<ul class="facList col-xs-10 next" id="equipList">
 
-						$folder = 'images/photos/';
-						$filetype = '*.*';
-						$imgs = glob($folder.$filetype);
-						$count = count($imgs);
-						$textfolder = 'images/text/';
-						$textfile = glob($textfolder.$filetype);
+					<?php
 
-						for ($i = 0; $i < $count; $i++){
+							$folder = 'images/equipment/';
+							$filetype = '*.*';
+							$imgs = glob($folder.$filetype);
+							$count = count($imgs);
+							$textfolder = 'images/equipText/';
+							$textfile = glob($textfolder.$filetype);
 
-							echo  '<li>
-									<img src="'.$imgs[$i].'">
-									<p style="text-align:center; font-size: 2em; margin: 10px 0 10px">'.file_get_contents($textfile[$i]).'</p>
-								</li>';
-						}
+							for ($i = 0; $i < $count; $i++){
 
-					?> 
-			</ul>
+								echo  '<li>
+										<img src="'.$imgs[$i].'">
+										<p style="text-align:center; font-size: 2em; margin: 10px 0 10px">'.file_get_contents($textfile[$i]).'</p>
+									</li>';
+							}
+
+						?> 
+				</ul>
+
 
 			
 			<!-- direction arrow for navigating slideshow RIGHT -->

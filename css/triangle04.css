@@ -1,235 +1,51 @@
-@font-face {
-  font-family: Raleway;
-  src: url(raleway.ttf); }
-* {
-  padding: 0 0 0 0;
-  margin: 0 0 0 0; }
+/*
+Error: Invalid CSS after "...kground-image: ": expected "{", was "url('pics/backg..."
+        on line 58 of css/triangle04.scss
 
-*:focus {
-  outline: 0;
-  outline: none; }
+53: 	margin-left: auto;
+54: }
+55: 
+56: .backgroundDiv {
+57: <<<<<<< HEAD
+58: 	background-image: url('pics/background02small.png');
+59: =======
+60: 	background-image: url('pics/background02.png');
+61: >>>>>>> e956eab8f27db238d9f5e927313c4857fef83940
+62: 	background-size: 100%;
+63: 	background-repeat: repeat-y;
 
-html {
-  margin: 0 0 0 0;
-  padding: 0 0 0 0;
-  -webkit-tap-highlight-color: transparent; }
-
-body {
-  max-width: 80em;
-  margin-right: auto;
-  margin-left: auto; }
-
-.backgroundDiv {
-  background-image: url("pics/background02small.png");
-  background-size: 100%;
-  background-repeat: repeat-y;
-  height: inherit; }
-
-a:hover {
-  text-decoration: none;
-  cursor: pointer; }
-
-.notTitlePage {
-  padding-top: 4em;
-  margin-top: 0em;
-  margin-bottom: 10em;
-  height: auto; }
-  @media (max-width: 768px) {
-    .notTitlePage {
-      margin-bottom: 1em; } }
-
-.banner {
-  position: relative;
-  top: 0;
-  height: 2em;
-  width: 75%;
-  display: inherit;
-  z-index: 10;
-  font-family: Raleway;
-  font-size: 2em;
-  color: #fbe3df; }
-  @media (max-width: 768px) {
-    .banner {
-      width: 100%; } }
-  .banner ul {
-    list-style: none; }
-    .banner ul li {
-      display: inline-block;
-      padding: 0 0 0 0; }
-      .banner ul li img {
-        max-width: 100%;
-        position: relative; }
-    .banner ul a {
-      position: relative; }
-      .banner ul a:hover {
-        text-decoration: none; }
-
-.bannerFade {
-  display: none; }
-
-.topPage {
-  height: 100vh; }
-
-.topPageLogo {
-  padding-top: 5em;
-  padding-bottom: 5em; }
-  .topPageLogo img {
-    max-width: 100%; }
-
-.topPageTitle {
-  font-family: Raleway;
-  font-size: 1.9em;
-  text-align: center; }
-
-.servicesPage {
-  margin-bottom: 30em; }
-  @media screen and (max-width: 768px) {
-    .servicesPage {
-      margin-bottom: 1em; } }
-  .servicesPage img {
-    max-width: 100%;
-    padding-left: 20%;
-    margin-top: 6em;
-    cursor: pointer; }
-    @media screen and (max-width: 768px) {
-      .servicesPage img {
-        padding-top: 1em;
-        margin-top: 1em; } }
-  .servicesPage .row {
-    margin-right: 6.25%; }
-  .servicesPage .infoBox {
-    margin-top: 2em;
-    display: none;
-    background-color: rgba(255, 255, 255, 0.8); }
-
-.infoBoxDiv {
-  cursor: pointer; }
-  @media (min-width: 768px) and (max-width: 992px) {
-    .infoBoxDiv {
-      position: fixed;
-      top: 0;
-      left: 0;
-      margin-top: 2em;
-      margin-left: 1em;
-      max-width: 80%;
-      font-size: 1.5em; } }
-  @media (max-width: 768px) {
-    .infoBoxDiv {
-      position: fixed;
-      top: 0;
-      left: 0;
-      margin-top: 2em;
-      margin-left: 1em;
-      margin-top: 2em;
-      font-size: 1.5em; } }
-
-.photoWrapper {
-  margin-top: 3em; }
-  @media (max-width: 768px) {
-    .photoWrapper {
-      margin-top: 8em; } }
-
-.photos {
-  max-width: 110%;
-  cursor: pointer;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; }
-  @media (min-width: 768px) and (max-width: 992px) {
-    .photos {
-      left: 3em;
-      max-width: 80%;
-      padding: 0 2em 0 2em; } }
-  @media (max-width: 768px) {
-    .photos {
-      left: 1em;
-      max-width: 80%;
-      padding: 0 2em 0 2em; } }
-
-.slideshow {
-  display: block;
-  position: relative;
-  margin: 0;
-  margin-bottom: 2em;
-  padding: 0;
-  overflow: scroll;
-  cursor: pointer;
-  z-index: 0; }
-  .slideshow .photosList {
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    height: auto;
-    list-style: none; }
-    .slideshow .photosList img {
-      height: 100%;
-      width: 100%; }
-    .slideshow .photosList li {
-      display: none; }
-
-#visible {
-  display: inline-block; }
-
-.navButtons {
-  display: inline-block;
-  font-size: 4.5em;
-  color: #534d49;
-  background-color: none;
-  border: none;
-  top: 200px; }
-  @media (min-width: 768px) and (max-width: 992px) {
-    .navButtons {
-      left: -0.2em; } }
-  @media (max-width: 768px) {
-    .navButtons {
-      left: -20em; } }
-
-.contactPage {
-  padding-top: 1em; }
-
-.contactInfo {
-  margin-top: 4em;
-  margin-bottom: 4em;
-  position: relative; }
-  .contactInfo p {
-    padding-right: 2em;
-    text-align: right;
-    font-family: Raleway;
-    color: #534d49;
-    font-size: 2em; }
-    @media (max-width: 768px) {
-      .contactInfo p {
-        padding-right: 0;
-        font-size: 1.5em; } }
-
-.map {
-  max-width: 100%;
-  top: -3em; }
-
-#map {
-  height: 30em;
-  width: 50em;
-  margin-left: auto;
-  margin-right: auto; }
-  @media (max-width: 768px) and (min-width: 992px) {
-    #map {
-      width: 50em;
-      margin-left: auto;
-      margin-right: auto; } }
-  @media (max-width: 768px) {
-    #map {
-      width: 25em;
-      height: 25em;
-      margin-left: auto;
-      margin-right: auto; } }
-
-.scrolloff {
-  pointer-events: none; }
-
-.endOfPage {
-  margin-top: 5em; }
-
-/*# sourceMappingURL=triangle04.css.map */
+Backtrace:
+css/triangle04.scss:58
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:1161:in `expected'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:1097:in `expected'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:1092:in `tok!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:637:in `block'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:707:in `declaration_or_ruleset'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:657:in `block_child'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:646:in `block_contents'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:638:in `block'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:631:in `ruleset'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:656:in `block_child'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:649:in `block_contents'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:117:in `stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/scss/parser.rb:42:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/engine.rb:403:in `_to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/engine.rb:295:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/lib/sass/plugin/compiler.rb:328:in `block in watch'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/vendor/listen/lib/listen/listener.rb:252:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.19/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...kground-image: \": expected \"{\", was \"url('pics/backg...\"\A         on line 58 of css/triangle04.scss\A \A 53: 	margin-left: auto;\A 54: }\A 55: \A 56: .backgroundDiv {\A 57: <<<<<<< HEAD\A 58: 	background-image: url('pics/background02small.png');\A 59: =======\A 60: 	background-image: url('pics/background02.png');\A 61: >>>>>>> e956eab8f27db238d9f5e927313c4857fef83940\A 62: 	background-size: 100%;\A 63: 	background-repeat: repeat-y;"; }

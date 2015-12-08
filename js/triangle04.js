@@ -242,16 +242,16 @@ $(document).ready(function() {
 //mapAPI
 
 var map;
-var address = {lat: 51.531394, lng: -0.101717};
+var address = {lat: 51.530843, lng: -0.101558};
 function initMap() {
 
 	var myMapColor = "#b3caed";
-	var myMapCircle = "#3F454F";
+	var myMapCircle = "#759FDE"; //changed the circle to blue rather than the grey 3F454F
 
 	var styles = [
     {
       stylers: [
-        { hue: myMapColor },
+        //removed the blue hue { hue: myMapColor },
         { saturation: -20 }
       ]
   }]
@@ -264,19 +264,19 @@ function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
     center: address,
     scrollWheel: false,
-    zoom: 14, //change to increase or decrease initial zoom on location
+    zoom: 13, //change to increase or decrease initial zoom on location
     mapTypeId: google.maps.MapTypeId.ROADMAP
     
   });
   		var locationCirlce = new google.maps.Circle({
 	      strokeColor: myMapCircle,
-	      strokeOpacity: 0.8,
+	      strokeOpacity: 1,
 	      strokeWeight: 2,
 	      fillColor: myMapCircle,
 	      fillOpacity: 0.35,
 	      map: map,
 	      center: address,
-	      radius: 150 //edit to change size of circle
+	      radius: 200 //edit to change size of circle
 	});
 
   		map.mapTypes.set('map_style', styledMap);
