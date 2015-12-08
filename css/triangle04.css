@@ -1,10 +1,18 @@
+@font-face {
+  font-family: Raleway;
+  src: url(raleway.ttf); }
 * {
   padding: 0 0 0 0;
   margin: 0 0 0 0; }
 
+*:focus {
+  outline: 0;
+  outline: none; }
+
 html {
   margin: 0 0 0 0;
-  padding: 0 0 0 0; }
+  padding: 0 0 0 0;
+  -webkit-tap-highlight-color: transparent; }
 
 body {
   max-width: 80em;
@@ -12,8 +20,8 @@ body {
   margin-left: auto; }
 
 .backgroundDiv {
-  background-image: url("pics/background02.png");
-  background-size: contain;
+  background-image: url("pics/background02small.png");
+  background-size: 100%;
   background-repeat: repeat-y;
   height: inherit; }
 
@@ -23,18 +31,26 @@ a:hover {
 
 .notTitlePage {
   padding-top: 4em;
-  margin-top: 60em;
+  margin-top: 0em;
+  margin-bottom: 10em;
   height: auto; }
+  @media (max-width: 768px) {
+    .notTitlePage {
+      margin-bottom: 1em; } }
 
 .banner {
   position: relative;
   top: 0;
   height: 2em;
+  width: 75%;
+  display: inherit;
   z-index: 10;
-  font-family: Helvetica, sans-serif;
+  font-family: Raleway;
   font-size: 2em;
-  color: #fbe3df;
-  display: inline-block; }
+  color: #fbe3df; }
+  @media (max-width: 768px) {
+    .banner {
+      width: 100%; } }
   .banner ul {
     list-style: none; }
     .banner ul li {
@@ -52,34 +68,39 @@ a:hover {
   display: none; }
 
 .topPage {
-  height: 60em; }
+  height: 100vh; }
 
 .topPageLogo {
-  padding-top: 10em;
+  padding-top: 5em;
   padding-bottom: 5em; }
   .topPageLogo img {
     max-width: 100%; }
 
 .topPageTitle {
-  font-family: Helvetica, sans-serif;
+  font-family: Raleway;
   font-size: 1.9em;
   text-align: center; }
 
-.servicesPage img {
-  max-width: 100%;
-  padding-left: 20%;
-  margin-top: 6em;
-  cursor: pointer; }
+.servicesPage {
+  margin-bottom: 30em; }
   @media screen and (max-width: 768px) {
-    .servicesPage img {
-      padding-top: 1em;
-      margin-top: 1em; } }
-.servicesPage .row {
-  margin-right: 6.25%; }
-.servicesPage .infoBox {
-  margin-top: 2em;
-  display: none;
-  background-color: rgba(255, 255, 255, 0.8); }
+    .servicesPage {
+      margin-bottom: 1em; } }
+  .servicesPage img {
+    max-width: 100%;
+    padding-left: 20%;
+    margin-top: 6em;
+    cursor: pointer; }
+    @media screen and (max-width: 768px) {
+      .servicesPage img {
+        padding-top: 1em;
+        margin-top: 1em; } }
+  .servicesPage .row {
+    margin-right: 6.25%; }
+  .servicesPage .infoBox {
+    margin-top: 2em;
+    display: none;
+    background-color: rgba(255, 255, 255, 0.8); }
 
 .infoBoxDiv {
   cursor: pointer; }
@@ -102,44 +123,34 @@ a:hover {
       margin-top: 2em;
       font-size: 1.5em; } }
 
-.facWrapper {
+.photoWrapper {
   margin-top: 3em; }
   @media (max-width: 768px) {
-    .facWrapper {
+    .photoWrapper {
       margin-top: 8em; } }
 
-.equipButton {
-  max-width: 100%;
-  position: relative; }
-  @media (max-width: 768px) {
-    .equipButton {
-      left: -25%; } }
-
-.studioButton {
-  position: relative;
-  left: 55%;
-  max-width: 100%; }
-  @media (max-width: 768px) {
-    .studioButton {
-      left: 25%;
-      padding-top: 1em; } }
-
-.fac {
+.photos {
   max-width: 110%;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
   @media (min-width: 768px) and (max-width: 992px) {
-    .fac {
+    .photos {
       left: 3em;
       max-width: 80%;
       padding: 0 2em 0 2em; } }
   @media (max-width: 768px) {
-    .fac {
+    .photos {
       left: 1em;
       max-width: 80%;
       padding: 0 2em 0 2em; } }
 
 .slideshow {
-  display: none;
+  display: block;
   position: relative;
   margin: 0;
   margin-bottom: 2em;
@@ -147,21 +158,23 @@ a:hover {
   overflow: scroll;
   cursor: pointer;
   z-index: 0; }
-  .slideshow .facList {
+  .slideshow .photosList {
     overflow: hidden;
     margin: 0;
     padding: 0;
     height: auto;
-    display: flex;
     list-style: none; }
-    .slideshow .facList img {
+    .slideshow .photosList img {
       height: 100%;
       width: 100%; }
-    .slideshow .facList li {
+    .slideshow .photosList li {
       display: none; }
 
+#visible {
+  display: inline-block; }
+
 .navButtons {
-  display: none;
+  display: inline-block;
   font-size: 4.5em;
   color: #534d49;
   background-color: none;
@@ -174,38 +187,23 @@ a:hover {
     .navButtons {
       left: -20em; } }
 
-#escapeX {
-  display: none;
-  font-size: 2em;
-  z-index: 20; }
-
-#studioList {
-  display: none;
-  list-style-type: none; }
-  #studioList img {
-    max-width: 100%; }
-
-#equipList {
-  display: none;
-  list-style-type: none; }
-  #equipList img {
-    max-width: 100%; }
-
 .contactPage {
   padding-top: 1em; }
 
 .contactInfo {
   margin-top: 4em;
+  margin-bottom: 4em;
   position: relative; }
   .contactInfo p {
     padding-right: 2em;
     text-align: right;
-    font-family: Helvetica, sans-serif;
+    font-family: Raleway;
     color: #534d49;
     font-size: 2em; }
     @media (max-width: 768px) {
       .contactInfo p {
-        padding-right: 0; } }
+        padding-right: 0;
+        font-size: 1.5em; } }
 
 .map {
   max-width: 100%;

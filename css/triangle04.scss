@@ -2,7 +2,7 @@
 // VARIABLES ARE ALL DECLARED HERE FOR USE LATER IN THE CSS
 
 
-$font-stack: Helvetica, sans-serif;
+$font-stack: Raleway;
 $myPrimaryColor: #F2777e;
 $mySecondaryColor: #7e899e;
 $myGrey: black;
@@ -24,6 +24,11 @@ $picHeight: 80vh;
 
 $myCursor: pointer;
 
+@font-face {
+	font-family: Raleway;
+	src: url(raleway.ttf);
+}
+
 // OVERALL DOCUMENT FORMATTING 
 
 * {
@@ -31,9 +36,15 @@ $myCursor: pointer;
 	margin: 0 0 0 0;
 }
 
+*:focus{
+	outline: 0;
+	outline: none;
+}
+
 html {
 	margin: 0 0 0 0;
 	padding: 0 0 0 0;
+	-webkit-tap-highlight-color: transparent;
 }
 
 body {
@@ -43,8 +54,8 @@ body {
 }
 
 .backgroundDiv {
-	background-image: url('pics/background02.png');
-	background-size: contain;
+	background-image: url('pics/background02small.png');
+	background-size: 100%;
 	background-repeat: repeat-y;
 	height: inherit;
 }
@@ -57,8 +68,12 @@ a:hover {
 // ALL THE PAGES THAT AREN'T THE TOP PAGE
 .notTitlePage {
 	padding-top: 4em;
-	margin-top: 60em;
+	margin-top: 0em;
+	margin-bottom: 10em;
 	height: auto;
+	@media (max-width: $breaksmall){
+		margin-bottom: 1em;
+	}
 }
 
 // BANNER
@@ -68,12 +83,16 @@ a:hover {
 	position: relative;
 	top: 0;
 	height: 2em;
-		
+	width:75%; 
+	display:inherit;
 	z-index: 10;
 	font-family: $font-stack;
 	font-size: 2em;
 	color: $myLightPink;
-	display: inline-block;
+	
+	@media (max-width: $breaksmall){
+		width: 100%;
+	}
 
 	ul {
 		list-style: none;
@@ -106,13 +125,13 @@ a:hover {
 // LANDING PAGE
 
 .topPage {
-	height: 60em;
+	height: 100vh;
 
 
 }
 
 .topPageLogo {
-	padding-top: 10em;
+	padding-top: 5em;
 	padding-bottom: 5em;
 	img {
 		max-width: 100%;
@@ -128,11 +147,16 @@ a:hover {
 // SERVICES PAGE
 
 .servicesPage {
+	margin-bottom: 30em;
+	@media screen and (max-width: $breaksmall) {
+			margin-bottom: 1em;
+		}
 	img {
 		max-width: 100%;
 		padding-left: 20%;
 		margin-top: 6em;
 		cursor: $myCursor;
+		
 		@media screen and (max-width: $breaksmall) {
 			padding-top: 1em;
 			margin-top: 1em;
@@ -171,36 +195,25 @@ a:hover {
 }
 
 
-// FACILITES PAGE
+// PHOTOS PAGE
 
-.facWrapper {
+.photoWrapper {
 	margin-top: 3em;
 	@media (max-width: $breaksmall) {
 		margin-top: 8em;
 	}
 }
 
-.equipButton {
-	max-width: 100%;
-	position:relative;
-	@media (max-width: $breaksmall) {
-		left: -25%;
-	}
-}
 
-.studioButton {
-		position: relative;
-		left: 55%;
-		max-width: 100%;
-		@media (max-width: $breaksmall) {
-			left: 25%;
-			padding-top: 1em;
-		}
-}
-
-.fac {
+.photos {
 	max-width: 110%;
 	cursor: $myCursor;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 
 	@media (min-width: $breaksmall) and (max-width: $breakmedium){
 		left: 3em;
@@ -215,7 +228,7 @@ a:hover {
 }
 
 .slideshow {
-	display: none;
+	display: block;
 	position: relative;
 	margin: 0;
 	margin-bottom: 2em;
@@ -223,25 +236,32 @@ a:hover {
 	overflow: scroll;
 	cursor: $myCursor;
 	z-index: 0;
-	.facList {
+	
+
+	.photosList {
 		overflow: hidden;
-			margin: 0;
-			padding: 0;
-			height: auto;
-			display: flex;
-			list-style: none;
-			img { 
-				height: 100%;
-				width: 100%;
-			}
-			li {
-				display: none;
-			}
+		margin: 0;
+		padding: 0;
+		height: auto;
+		list-style: none;
+		img { 
+			height: 100%;
+			width: 100%;
+		}
+		li {
+			display: none;
+
+		}
 	}
 }
 
+#visible {		
+	display: inline-block;	
+}
+
+
 .navButtons {
-	display: none;
+	display: inline-block;
 	font-size: 4.5em;
 	color: $myDarkGrey;
 	background-color: none;
@@ -256,27 +276,6 @@ a:hover {
 	
 }
 
-#escapeX {
-	display: none;
-	font-size: 2em;
-	z-index: 20;
-}
-
-#studioList {
-	display: none;
-	list-style-type: none;
-	img {
-		max-width: 100%;
-	}
-}
-
-#equipList {
-	display: none;
-	list-style-type: none;
-	img {
-		max-width: 100%;
-	}
-}
 
 // CONTACT PAGE
 
@@ -286,6 +285,7 @@ a:hover {
 
 .contactInfo {
 	margin-top: 4em;
+	margin-bottom: 4em;
 	position: relative;
 	p {
 		padding-right: 2em;
@@ -296,6 +296,7 @@ a:hover {
 		
 		@media (max-width: $breaksmall){
 			padding-right: 0;
+			font-size: 1.5em;
 		}
 	}
 	

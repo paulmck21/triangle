@@ -16,7 +16,7 @@
 
 	<!-- Landing Page to be set to 100% height-->	
 	
-	<div class="container topPage">
+	<div class="container topPage" style="width:100%">
 
 		<div class="row">
 
@@ -30,7 +30,7 @@
 		</div>
 
 	<!-- 	THIS IS THE BANNER WITH NAVIGATION BAR -->
-	<div class="banner container">
+	<div class="banner container" >
 		<ul class="row">
 			<li class="col-xs-4" id="servicesBanner">
 				<a href="#services">
@@ -42,10 +42,10 @@
 				
 			</li>
 			
-			<li class="col-xs-4" id="facBanner">
-				<a href="#facilities">
-					<img src="css/pics/bannerFacilities.png" class="facBannerImg bannerImg">
-					<img src="css/pics/bannerFacilitiesFade.png" class="facBannerFade bannerFade">
+			<li class="col-xs-4" id="photosBanner">
+				<a href="#photos">
+					<img src="css/pics/bannerPhotos.png" class="photosBannerImg bannerImg">
+					<img src="css/pics/bannerPhotosFade.png" class="photosBannerFade bannerFade">
 				</a>
 				
 			</li>
@@ -55,6 +55,7 @@
 					<img src="css/pics/bannerContact.png" class="contactBannerImg bannerImg">
 					<img src="css/pics/bannerContactFade.png" class="contactBannerFade bannerFade">
 				</a>
+				
 				
 			</li>
 		</ul>
@@ -69,15 +70,15 @@
 	<div class="container notTitlePage servicesPage" id="services">
 		<div class="row">
 
-			<div class="col-md-4 col-sm-12 services soundButton">
-			<!-- THESE ARE THE IMAGES FOR THE SERVICES BUTTONS -->
-				<img src="css/pics/services01.png" alt="">
-			</div>
-
 			<div class="col-md-4 col-sm-12 services voiceButton">
 				<img src="css/pics/services02.png" alt="">
 			</div>
 
+			<div class="col-md-4 col-sm-12 services soundButton">
+			<!-- THESE ARE THE IMAGES FOR THE SERVICES BUTTONS -->
+				<img src="css/pics/services01.png" alt="">
+			</div>
+			
 			<div class="col-md-4 col-sm-12 services locationButton">
 				<img src="css/pics/services03.png" alt="">
 			</div>
@@ -116,78 +117,42 @@
 
 	<!-- Equipment Page -->
 
-	<div class="container notTitlePage facilitesPage" id="facilities">
-		<div class="row">
+	<div class="container notTitlePage photosPage" id="photos">
 		
-		<!-- THESE ARE THE BUTTONS TO START THE SLIDESHOWS -->
-			<div class="col-md-3 col-md-offset-3 col-sm-12 facWrapper">
-				<img src="css/pics/equipButton.png" alt="" class="fac equipButton">
-				<img src="css/pics/studioButton.png" alt="" class="fac studioButton">
-
-			</div>
-
-
-		</div>
-				<!-- ESCAPE X FOR THE SLIDESHOW -->
-				<span id='escapeX' class="glyphicon glyphicon-remove" aria-hidden="true"></span>
 		<div class="row slideshow">
+				
+			<!-- direction arrow for navigating slideshow LEFT -->
+			<span id='arrowLeft' class="glyphicon glyphicon-triangle-left navButtons col-xs-1 prev" 
+				aria-hidden="true"></span>
 			
+			
+			<!-- equipment slideshow pictures -->
+			<ul class="photosList col-xs-10 next" id="photosList">
 
-		
-				
-				<!-- direction arrow for navigating slideshow LEFT -->
-				<span id='arrowLeft' class="glyphicon glyphicon-triangle-left navButtons col-xs-1" 
-					aria-hidden="true"></span>
-				
-				
-				<!-- equipment slideshow pictures -->
-				<ul class="facList col-xs-10 next" id="equipList">
-
-					<?php
-
-							$folder = 'images/equipment/';
-							$filetype = '*.*';
-							$imgs = glob($folder.$filetype);
-							$count = count($imgs);
-							$textfolder = 'images/equipText/';
-							$textfile = glob($textfolder.$filetype);
-
-							for ($i = 0; $i < $count; $i++){
-
-								echo  '<li>
-										<img src="'.$imgs[$i].'">
-										<p>'.file_get_contents($textfile[$i]).'</p>
-									</li>';
-							}
-
-						?> 
-				</ul>
-
-				<!-- studio slideshow pictures -->
-				<ul class="facList col-xs-10 next" id="studioList">
 				<?php
 
-							$folder = 'images/studio/';
-							$filetype = '*.*';
-							$imgs = glob($folder.$filetype);
-							$count = count($imgs);
-							$textfolder = 'images/studioText/';
-							$textfile = glob($textfolder.$filetype);
+						$folder = 'images/photos/';
+						$filetype = '*.*';
+						$imgs = glob($folder.$filetype);
+						$count = count($imgs);
+						$textfolder = 'images/text/';
+						$textfile = glob($textfolder.$filetype);
 
-							for ($i = 0; $i < $count; $i++){
+						for ($i = 0; $i < $count; $i++){
 
-								echo  '<li>
-										<img src="'.$imgs[$i].'">
-										<p>'.file_get_contents($textfile[$i]).'</p>
-									</li>';
-							}
+							echo  '<li>
+									<img src="'.$imgs[$i].'">
+									<p style="text-align:center; font-size: 2em; margin: 10px 0 10px">'.file_get_contents($textfile[$i]).'</p>
+								</li>';
+						}
 
-						?> 
-					
-				</ul>
-				<!-- direction arrow for navigating slideshow RIGHT -->
-				<span id='arrowRight' class="glyphicon glyphicon-triangle-right 
-					navButtons  next col-xs-1" aria-hidden="true"></span>
+					?> 
+			</ul>
+
+			
+			<!-- direction arrow for navigating slideshow RIGHT -->
+			<span id='arrowRight' class="glyphicon glyphicon-triangle-right 
+				navButtons next col-xs-1" aria-hidden="true"></span>
 
 			
 
@@ -206,9 +171,8 @@
 	<!-- OBVIOUSLY PUT YOUR ACTUAL DETAILS IN HERE, HAVEN'T REALLY FORMATTED IT HEAVILY
 		BUT IF YOU WANT TO CHANGE THE FONT OR COLOUR IT'LL BE EASY -->
 		<div class="contactInfo">
-				<p>Donal Sweeney</p>
-				<p>077555555</p>
-				<p>info@triangle.audio</p>
+				<p><a href="mailto:info@triangleaudio.co.uk?Subject=Hello" style="color: #534d49" target="_top">INFO@TRIANGLEAUDIO.CO.UK</a></p>
+				<p>+44 740 393 4602</p></br>
 			</div>
 
 		<div class="row">

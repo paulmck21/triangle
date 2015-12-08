@@ -2,6 +2,7 @@
 
 	$('.slideshow').css('overflow', 'hidden');
 
+
 	
 	//Fix for Android Chrome stubbornly displaying .infoBox
 	var d = document;
@@ -32,9 +33,9 @@ $(document).ready(function() {
 		highlightServices();
 	})
 
-	$("#facBanner").on('click', function() {
+	$("#photosBanner").on('click', function() {
 		resetBanner();
-		highlightFacilities();
+		highlightPhotos();
 	})
 
 	$("#contactBanner").on('click', function() {
@@ -49,7 +50,7 @@ $(document).ready(function() {
 
 		var $banner = $(".banner");
 		var servicesHeight = $("#services").offset().top;
-		var facHeight = $("#facilities").offset().top - 200;
+		var photosHeight = $("#photos").offset().top - 200;
 		var contactHeight = $("#contact").offset().top - 200;
 		var bannerHeight = $banner.offset().top;
 		var scrollHeight = $(window).scrollTop();
@@ -66,15 +67,15 @@ $(document).ready(function() {
 			$(".bannerFade").hide();
 			$(".bannerImg").show();
 
-		} else if ( scrollHeight > (servicesHeight * 0.8) && scrollHeight < facHeight + 1){
+		} else if ( scrollHeight > (servicesHeight * 0.8) && scrollHeight < photosHeight + 1){
 			//highlight #servicesBanner
 			resetBanner();
 			highlightServices();
-		} else if ( scrollHeight > (facHeight) && scrollHeight < (contactHeight) ){
+		} else if ( scrollHeight > (photosHeight) && scrollHeight < (contactHeight) ){
 			
-			//highlight #facBanner
+			//highlight #photosBanner
 			resetBanner();
-			highlightFacilities();
+			highlightPhotos();
 		} else if ( scrollHeight > (contactHeight)){
 			
 			//highlight #contactBanner
@@ -99,10 +100,10 @@ $(document).ready(function() {
 		$(".servicesBannerImg").show();
 	}
 
-	function highlightFacilities() {
+	function highlightPhotos() {
 		resetBanner();
-		$(".facBannerFade").hide();
-		$(".facBannerImg").show();
+		$(".photosBannerFade").hide();
+		$(".photosBannerImg").show();
 	}
 
 	function highlightContacts() {
@@ -157,104 +158,71 @@ $(document).ready(function() {
 		$infoBox.fadeOut();
 	});
 
-	//FACILITES
+	//PHOTOS
 
-	//on clicking facilites buttons show slideshow
-
-	var $escapeX = $('#escapeX'),
-		$navButtons = $('.navButtons'),
-		$slideshow = $('.slideshow'),
-		$next = $('#arrowRight'),
-		$studioList = $('#studioList'),
-		studioListImg = $('#studioList li'),
-		$equipList = $('#equipList'),
-		equipListImg = $('#equipList li'),
-		$list = $('#equipList'),
-		listItems = $equipList;
-
-	$('.equipButton').on('click', function() {
-		toggleButtons();
-		$equipList.toggle();
-
-		listItems =  $(equipListImg);
-		listLen = listItems.length;
-		pos = 0;
-		currImg = listItems[pos];
-		$next = listItems.add($('#arrowRight'));
-		nextImage;
-
-		$(currImg).show();
-		
-	});
-
-	$('.studioButton').on('click', function() {
-		toggleButtons();
-		$studioList.toggle();
-
-		listItems =  $(studioListImg);
-		listLen = listItems.length;
-		pos = 0;
-		currImg = listItems[pos];
-		$next = listItems.add($('#arrowRight'));
-		nextImage;
-
-		$(currImg).show();
-	});
+	//Start of Slideshow
 
 
-	//function to bring you back to facilities
-	function escapeSlideshow() {
-		toggleButtons();
-		$equipList.hide();
-		$('#studioList').hide();
-	};
-
-	//function to toggle X, studio and equipment buttons
-	function toggleButtons(){
-		$escapeX.toggle();
-		$slideshow.toggle();
-		$('.fac').toggle();
-		$navButtons.toggle();
-	};
 
 
-	//EVENT LISTENERS AND FUNCTIONS to move back and forth in the slideshow
-	$('.next').on('click', nextImage);
-	$('#arrowLeft').on('click', prevImage);
-	function nextImage(){
-		if (pos == (listLen - 1)) {
-			pos = 0;
-		} else{
-			pos +=1
-		};
-		$(currImg).toggle();
-		currImg = listItems[pos];
-		$(currImg).toggle();
-	}
+	
+	var $photosList = $('#photosList');
+	var $photos = $('#photosList li');
+	var photoLen = $photos.length;
+	var firstPhoto = $photos[0];
+	var pos = 0;
+	var listItems = $photosList;
+	var currImg = $photos[pos];
+	var $next = $('.next');
+	var $prev = $('.prev');
 
-	function prevImage(){
-		if (pos == 0){
-			pos = listLen - 1;
-		} else{
-			pos -=1
-		}
-		$(currImg).toggle();
-		currImg = listItems[pos];
-		console.log("pos is " + pos);
-		$(currImg).toggle();
-	}
+	console.log('photos[0] is ' + $photos[0])
 
-	$escapeX.on('click', escapeSlideshow);
+	$(currImg).attr('id', 'visible');
 
-	//keyup listener for escape out of slideshow USING ESCAPE KEY
-
-	$(document).keyup(function(e){
-		if (e.keyCode == 27){
-			if ($('.facList').is(':visible')){
-				escapeSlideshow();
-			}
-		}
+	$next.on('click', function(){
+		nextPhoto()
 	})
+
+	$prev.on('click', function(){
+		prevPhoto()
+	})
+
+	function nextPhoto() {
+		if (pos < photoLen - 1){
+			$(currImg).hide();
+			pos++;
+			console.log("pos is " + pos);
+			currImg = $photos[pos];
+			$(currImg).show();
+		} else {
+			$(currImg).hide();
+			pos = 0;
+			console.log("pos is " + pos);
+			currImg = $photos[pos];
+			$(currImg).show();
+		}
+	}
+
+	function prevPhoto() {
+		if (pos > 0){
+			$(currImg).hide();
+			pos--;
+			console.log("pos is " + pos);
+			currImg = $photos[pos];
+			$(currImg).attr('id', 'visible');
+			$(currImg).show();
+		} else {
+			$(currImg).hide();
+			pos = photoLen - 1;
+			console.log("pos is " + pos);
+			currImg = $photos[pos];
+			$(currImg).show();
+		}
+	}
+
+
+	//CONTACT
 
 	//disable scroll on map
 
